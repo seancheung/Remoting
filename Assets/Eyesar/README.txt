@@ -1,3 +1,5 @@
+---Remoting---
+
 客户端：
 0. 新建项目用来定义协议
 1. 为 EyesarSharedObject 添加抽象/非抽象属性(即协议字段), 或抽象/非抽象方法(交互接口)
@@ -16,3 +18,8 @@
 服务端通过 EyesarServer.SharedObject 来获取/修改数据
 无论哪一方修改数据，另一方取得的都是最新的结果
 *在服务端施放资源之前，SharedObject永远为单例，即使幻眼客户端重启
+
+---Commandline---
+服务端传入格式: xxx.exe [-arg value]...
+如: sample.exe -arg1 "This is string" -arg2 18 -p false -float 0.866
+客户端调用CommandParser获取解析后的参数

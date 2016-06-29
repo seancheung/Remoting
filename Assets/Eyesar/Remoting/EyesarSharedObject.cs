@@ -10,12 +10,7 @@ namespace Eyesar.Remoting
 {
     public abstract class EyesarSharedObject : MarshalByRefObject
     {
-        public DateTime TimeStamp { get; private set; }
         public abstract string Provider { get; }
-
-        protected EyesarSharedObject(DateTime timeStamp)
-        {
-            TimeStamp = timeStamp;
-        }
+        public abstract DateTime TimeStamp { get; }
     }
 }
